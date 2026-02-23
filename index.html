@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BlackStack Log</title>
+<meta name="description" content="BlackStack Log">
+
+<link rel="stylesheet" href="index.css">
+
+<!-- Markdown Parser -->
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+<!-- Syntax Highlight -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js/styles/github-dark.css">
+<script src="https://cdn.jsdelivr.net/npm/highlight.js/lib/common.min.js"></script>
+</head>
+
+<body>
+
+<!-- Show only MD render results in this area -->
+<main id="viewer">
+  <div id="content-area">Loading...</div>
+</main>
+
+<script>
+/* 1) Modify only here: Path to MD file to render */
+const TARGET_MD = "test.md";
+
+/* 2) Marked settings (GFM + code highlighting) */
+marked.setOptions({
+  gfm: true,
+  breaks: false,
+  headerIds: true,
+  mangle: false,
+  highlight: (code) => hljs.highlightAuto(code).value
+});
+
+const contentArea = document.getElementById("content-area");
+
+/* 3) Load MD file → Convert to HTML → Output */
+fetch(TARGET_MD)
+  .then(res => {
+    if (!res.ok) throw new Error("fetch failed");
+    return res.text();
+  })
+  .then(md => {
+    contentArea.innerHTML = marked.parse(md);
+  })
+  .catch(() => {
+    contentArea.innerHTML = "<h2>문서를 불러올 수 없습니다.</h2>";
+  });
+</script>
+
+</body>
+</html>

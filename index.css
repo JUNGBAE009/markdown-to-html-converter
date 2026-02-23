@@ -1,0 +1,30 @@
+@font-face {
+  font-family: 'NeoDonggeunmo';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.3/NeoDunggeunmo.woff') format('woff');
+  font-weight: normal;
+  font-display: swap;
+}
+
+* { box-sizing: border-box; margin:0; padding:0; }
+
+body {
+  background:#000;
+  color:#fff;
+  font-family:'NeoDonggeunmo', monospace;
+  line-height:1.8;
+  padding: 2rem;
+}
+
+#viewer { max-width: 1000px; margin: 0 auto; }
+
+/* Markdown style */
+#viewer h1 { border-bottom: 2px solid #fff; margin-bottom: 1rem; }
+#viewer h2 { border-bottom: 1px solid #fff; margin-top: 2rem; }
+#viewer hr { border:none; border-top:2px solid #fff; margin:2rem 0; }
+#viewer blockquote { border-left:4px solid #fff; padding-left:1rem; margin:1rem 0; opacity:.85; }
+#viewer table { border-collapse:collapse; margin:1rem 0; }
+#viewer th, #viewer td { border:1px solid #fff; padding:6px 12px; }
+#viewer a { color:#fff; text-decoration: underline; }
+#viewer del { opacity:.6; }
+#viewer pre { background:#121212; padding:1rem; border:1px solid #fff; overflow-x:auto; }
+#viewer input[type="checkbox"] { accent-color: white; }
