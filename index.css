@@ -1,14 +1,7 @@
-@font-face {
-  font-family: 'NeoDonggeunmo';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.3/NeoDunggeunmo.woff') format('woff');
-  font-weight: normal;
-  font-display: swap;
-}
-
 * { box-sizing: border-box; margin:0; padding:0; }
 
 body {
-  background:#000;
+  background:#121212;
   color:#fff;
   font-family:'NeoDonggeunmo', monospace;
   line-height:1.8;
