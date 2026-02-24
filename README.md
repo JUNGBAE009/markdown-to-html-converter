@@ -25,8 +25,6 @@
 #### - One HTML file
 #### - One CSS file
 #### - Standard Markdown files
-#### - No build tools
-#### - No framework
 #### - No backend
 
 #### It works on static hosting environments such as GitHub Pages.
